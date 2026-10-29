@@ -1,0 +1,808 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: clip;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #fff;
+}
+
+
+/* ==============================
+   HEADER / NAVIGATION
+============================== */
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: 100%;
+    padding: 18px 5%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #222;
+}
+
+.nav-bar > div {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    margin-left: 0;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b72025;
+}
+
+
+/* ==============================
+   MAIN HERO SECTION
+============================== */
+
+.main-text {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 580px;
+
+    margin: 0 auto;
+    padding: 65px 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+/* HERO TEXT */
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.span-text {
+    display: block;
+    margin: 0;
+
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1.2;
+    color: #fff;
+}
+
+.section-text .h1-text {
+    margin: 0;
+
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.1;
+
+    color: #b72025;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.p-text {
+    max-width: 480px;
+    margin: 0;
+
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* HERO ORDER BUTTON */
+
+.order-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 12px 28px;
+    margin: 5px 0 0;
+
+    background-color: #b72025;
+    color: #fff;
+
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(183, 32, 37, 0.25);
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #96161a;
+    transform: translateY(-3px);
+}
+
+/* HERO PIZZA IMAGE */
+
+.main-text > section:nth-child(2) {
+    min-width: 0;
+    width: 100%;
+}
+
+.pizza-frame {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 3%;
+}
+
+.pizza-img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ==============================
+   PIZZA FAMILY IMAGE SCROLL
+============================== */
+
+.pizza-family {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 440px;
+    margin: 30px auto 70px;
+    padding: 12px;
+    display: flex;
+    gap: 15px;
+    background-color: #111;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #b72025 #222;
+}
+
+/* EACH SCROLL ITEM */
+
+.pizza-family .scroll {
+    flex: 0 0 50%;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* SCROLL IMAGES */
+
+.pizza-family .pizza-scroll {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.pizza-family .scroll:hover .pizza-scroll {
+    transform: scale(1.04);
+}
+
+
+/* ==============================
+   ORDER PROMO SECTION
+============================== */
+
+.order-text {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 70px auto 50px;
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+
+    color: #aaa;
+    text-align: center;
+    line-height: 1.7;
+
+    background-color: #101010;
+    border: 1px solid #444;
+    border-radius: 15px;
+}
+
+.pizza-txt {
+    display: block;
+
+    color: #fff;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.pizza-txt1 {
+    width: 100%;
+    max-width: 750px;
+
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.order-text > div {
+    margin-top: 5px;
+}
+
+.order-txt-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 28px;
+
+    background-color: #b72025;
+    color: #fff;
+
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.order-txt-btn:hover {
+    background-color: #96161a;
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    width: 100%;
+    margin-top: 60px;
+    padding: 45px 7%;
+    background-color: #242424;
+    color: #fff;
+}
+
+/* FOOTER NAVIGATION AND LOGO */
+
+.footer-page {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.nav-page ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-page a {
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-page a:hover {
+    color: #b72025;
+}
+
+.pizza-logo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* SOCIAL MEDIA AND PAYMENT */
+
+footer section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    padding: 25px 0;
+    border-top: 1px solid #454545;
+    border-bottom: 1px solid #454545;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:nth-child(1) {
+    color: #25d366;
+}
+
+.social-links a:nth-child(2) {
+    color: #e4405f;
+}
+
+.social-links a:nth-child(3) {
+    color: #fff;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+}
+
+.mastercard {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ABOUT THE BUSINESS */
+
+footer section:nth-of-type(3) {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+footer section:nth-of-type(3) p:first-child {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer section:nth-of-type(3) p:last-child {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   LAPTOP / SMALL DESKTOP
+============================== */
+
+@media (max-width: 1100px) {
+
+    .nav-bar {
+        padding: 18px 3%;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 115px;
+    }
+
+    .nav-links {
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .main-text {
+        width: 92%;
+        gap: 25px;
+    }
+
+    .pizza-family {
+        height: 380px;
+    }
+
+    .pizza-family .scroll {
+        flex-basis: 55%;
+    }
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .nav-bar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+
+        padding: 15px 4%;
+    }
+
+    .logo {
+        width: 105px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* HERO */
+
+    .main-text {
+        width: 90%;
+        min-height: auto;
+
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 20px;
+
+        padding: 50px 0;
+    }
+
+    .section-text {
+        gap: 16px;
+    }
+
+    .span-text {
+        font-size: 30px;
+    }
+
+    .section-text .h1-text {
+        font-size: 42px;
+    }
+
+    .p-text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .pizza-img {
+        height: 320px;
+    }
+
+    .order-button {
+        padding: 11px 18px;
+        font-size: 12px;
+    }
+
+    /* IMAGE SCROLL */
+
+    .pizza-family {
+        width: 90%;
+        height: 330px;
+
+        margin: 25px auto 50px;
+        gap: 12px;
+    }
+
+    .pizza-family .scroll {
+        flex-basis: 65%;
+    }
+
+    /* PROMO */
+
+    .order-text {
+        padding: 28px 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 35px 5%;
+    }
+
+    .footer-page {
+        gap: 25px;
+    }
+
+    .pizza-logo {
+        width: 120px;
+    }
+
+    footer section:nth-of-type(2) {
+        gap: 20px;
+    }
+
+    .mastercard {
+        width: 160px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+
+    .nav-bar {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 95px;
+    }
+
+    .nav-links {
+        gap: 8px 14px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    /* HERO */
+
+    .main-text {
+        width: 90%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+
+        padding: 35px 0 25px;
+    }
+
+    .section-text {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .span-text {
+        font-size: 27px;
+    }
+
+    .section-text .h1-text {
+        font-size: clamp(38px, 10vw, 48px);
+    }
+
+    .p-text {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .order-button {
+        width: fit-content;
+        padding: 12px 24px;
+        margin: 5px 0 0;
+    }
+
+    .main-text > section:nth-child(2) {
+        width: 100%;
+    }
+
+    .pizza-frame {
+        width: 100%;
+        max-width: none;
+    }
+
+    .pizza-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    /* IMAGE SCROLL */
+
+    .pizza-family {
+        width: 92%;
+        height: 260px;
+
+        padding: 8px;
+        gap: 10px;
+
+        margin: 25px auto 45px;
+        border-radius: 12px;
+    }
+
+    .pizza-family .scroll {
+        flex: 0 0 90%;
+        height: 100%;
+    }
+
+    .pizza-family .pizza-scroll {
+        object-fit: contain;
+    }
+
+    /* PROMO */
+
+    .order-text {
+        width: 90%;
+        margin: 45px auto 35px;
+        padding: 25px 16px;
+        gap: 12px;
+    }
+
+    .pizza-txt {
+        font-size: 23px;
+    }
+
+    .pizza-txt1 {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .order-txt-btn {
+        padding: 12px 24px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 20px;
+        margin-top: 45px;
+    }
+
+    .footer-page {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .nav-page ul {
+        gap: 10px;
+    }
+
+    .pizza-logo {
+        width: 110px;
+    }
+
+    footer section:nth-of-type(2) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        margin-top: 25px;
+        padding: 22px 0;
+    }
+
+    .social-links {
+        gap: 22px;
+    }
+
+    .mastercard {
+        width: 155px;
+    }
+
+    footer section:nth-of-type(3) {
+        margin-top: 25px;
+    }
+
+    footer section:nth-of-type(3) p:first-child {
+        font-size: 18px;
+    }
+
+    footer section:nth-of-type(3) p:last-child {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+
+/* ==============================
+   VERY SMALL PHONES
+============================== */
+
+@media (max-width: 350px) {
+
+    .nav-links {
+        gap: 8px 11px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .span-text {
+        font-size: 24px;
+    }
+
+    .section-text .h1-text {
+        font-size: 36px;
+    }
+
+    .pizza-family {
+        height: 220px;
+    }
+
+    .pizza-family .scroll {
+        flex-basis: 95%;
+    }
+
+    .pizza-txt {
+        font-size: 20px;
+    }
+}

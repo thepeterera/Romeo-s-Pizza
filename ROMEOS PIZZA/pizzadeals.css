@@ -1,0 +1,477 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* HEADER */
+.nav-bar {
+    width: 100%;
+    min-height: 95px;
+    padding: 15px 5%;
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #252525;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 150px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #b72025;
+}
+
+
+/* HERO SECTION */
+.deals-hero {
+    min-height: 300px;
+    padding: 65px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.80),
+            rgba(0, 0, 0, 0.92)
+        ),
+        url("https://romeospizza.ng/wp-content/uploads/al_opt_content/IMAGE/romeospizza.ng/wp-content/uploads/2025/12/FESTIVE-BOX-COMBO-1536.png.bv.webp");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.small-heading,
+.section-label {
+    color: #d52b32;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.deals-hero h1 {
+    margin: 12px 0;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.deals-hero h1 span,
+.deals-intro h2 span,
+.bottom-promo h2 span {
+    color: #b72025;
+}
+
+.hero-description {
+    margin-bottom: 20px;
+    color: #dddddd;
+    font-size: 17px;
+}
+
+.breadcrumb {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+}
+
+.breadcrumb a:hover {
+    color: #b72025;
+}
+
+
+/* INTRODUCTION */
+.deals-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 25px 45px;
+    text-align: center;
+}
+
+.deals-intro h2 {
+    margin: 12px 0 18px;
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.25;
+}
+
+.deals-intro > p:last-child {
+    color: #bbbbbb;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* DEALS GRID */
+.deals-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 0 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+
+/* INDIVIDUAL DEAL CARD */
+.deal-card {
+    min-width: 0;
+    background-color: #111111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+    border-color: #bdb6ad;;
+}
+
+
+/* IMAGE FRAME */
+.deal-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #080808;
+    overflow: hidden;
+}
+
+/* SHOW THE COMPLETE IMAGE */
+.deal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* DEAL DETAILS */
+.deal-details {
+    padding: 22px;
+}
+
+.deal-category {
+    margin-bottom: 8px;
+    color: #e04449;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.deal-details h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.deal-description {
+    min-height: 75px;
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.deal-price {
+    margin: 18px 0;
+    color: #e04449;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+
+/* ORDER BUTTON */
+.order-button {
+    width: fit-content;
+    min-height: 45px;
+    padding: 12px 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #b72025;
+    color: #ffffff;
+    border: 1px solid #b72025;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #e04449;
+}
+
+
+/* IMAGE-ONLY PROMO CARDS */
+.image-only-deal .deal-image {
+    aspect-ratio: 4 / 3;
+    padding: 12px;
+}
+
+
+/* BOTTOM PROMO */
+.bottom-promo {
+    padding: 75px 20px;
+    text-align: center;
+    background-color: #111111;
+    border-top: 1px solid #292929;
+}
+
+.bottom-promo h2 {
+    margin: 12px 0;
+    font-size: clamp(26px, 4vw, 42px);
+    line-height: 1.3;
+}
+
+.bottom-promo > p:not(.section-label) {
+    margin-bottom: 25px;
+    color: #bbbbbb;
+    font-size: 15px;
+}
+
+
+/* FOOTER */
+.footer {
+    padding: 45px 20px 25px;
+    text-align: center;
+    background-color: #050505;
+}
+
+.footer-logo-link {
+    display: inline-block;
+}
+
+.footer-logo {
+    width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.footer-tagline {
+    margin: 12px 0 25px;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #e04449;
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid #222222;
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* TABLET */
+@media screen and (max-width: 1000px) {
+    .nav-bar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .deals-container {
+        width: 92%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .deals-intro {
+        padding-top: 55px;
+    }
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+    .nav-bar {
+        padding: 15px 4%;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .deals-hero {
+        min-height: 250px;
+        padding: 45px 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .deals-intro {
+        padding: 50px 20px 30px;
+    }
+
+    .deals-intro > p:last-child {
+        font-size: 14px;
+    }
+
+    .deals-container {
+        width: 90%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        padding-bottom: 55px;
+    }
+
+    .deal-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .deal-details {
+        padding: 20px;
+    }
+
+    .deal-details h3 {
+        font-size: 22px;
+    }
+
+    .deal-description {
+        min-height: 0;
+    }
+
+    .bottom-promo {
+        padding: 55px 20px;
+    }
+
+    .footer-links {
+        gap: 15px 20px;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media screen and (max-width: 350px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .deals-container {
+        width: 94%;
+    }
+
+    .deal-details {
+        padding: 16px;
+    }
+
+    .deal-price {
+        font-size: 24px;
+    }
+}

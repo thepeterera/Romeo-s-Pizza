@@ -1,0 +1,549 @@
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+.nav-bar {
+    width: 100%;
+    min-height: 95px;
+    padding: 15px 5%;
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #252525;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 150px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e04449;
+}
+
+
+/* HERO */
+.order-hero {
+    min-height: 300px;
+    padding: 60px 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.83),
+            rgba(0, 0, 0, 0.93)
+        ),
+        url("https://romeospizza.ng/wp-content/uploads/2026/01/ROMEOS-PIZZA-YABA-WEBSITE-1-1536x1536.png");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-label {
+    color: #e04449;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.order-hero h1 {
+    margin: 12px 0;
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+}
+
+.order-hero h1 span,
+.store-intro h2 span,
+.order-bottom h2 span {
+    color: #b72025;
+}
+
+.hero-description {
+    margin-bottom: 20px;
+    color: #dddddd;
+    font-size: 17px;
+}
+
+.breadcrumb {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+}
+
+.breadcrumb a:hover {
+    color: #e04449;
+}
+
+
+/* INTRODUCTION */
+.store-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 25px 45px;
+    text-align: center;
+}
+
+.store-intro h2 {
+    margin: 12px 0 18px;
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.3;
+}
+
+.store-intro > p:last-child {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* STORE SECTION */
+.store-section {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 0 45px;
+}
+
+
+/* CITY HEADING */
+.city-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.city-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #b72025;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.city-heading h2 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.city-heading p {
+    margin-top: 4px;
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+
+/* STORE GRID */
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* STORE CARD */
+.store-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #111111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    border-color: #b72025;
+}
+
+
+/* STORE IMAGE */
+.store-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #080808;
+    overflow: hidden;
+}
+
+.store-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.store-card:hover .store-image img {
+    transform: scale(1.03);
+}
+
+
+/* STORE DETAILS */
+.store-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 22px;
+}
+
+.store-city {
+    margin-bottom: 6px;
+    color: #e04449;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.store-details h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.store-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    margin-bottom: 22px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.store-address i {
+    margin-top: 5px;
+    color: #e04449;
+}
+
+
+/* STORE BUTTON */
+.store-button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: auto;
+    padding: 12px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background-color: #b72025;
+    border: 1px solid #b72025;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.store-button:hover {
+    background-color: transparent;
+    border-color: #e04449;
+}
+
+
+/* CLOSING SECTION */
+.order-bottom {
+    padding: 75px 22px;
+    margin-top: 25px;
+
+    text-align: center;
+    background-color: #111111;
+    border-top: 1px solid #292929;
+}
+
+.order-bottom h2 {
+    margin: 14px 0;
+    font-size: clamp(26px, 4vw, 42px);
+    line-height: 1.35;
+}
+
+.order-bottom > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #bbbbbb;
+    font-size: 15px;
+}
+
+
+/* FOOTER */
+.footer {
+    padding: 45px 20px 25px;
+    text-align: center;
+    background-color: #050505;
+}
+
+.footer-logo-link {
+    display: inline-block;
+}
+
+.footer-logo {
+    width: 150px;
+    max-height: 80px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.footer-tagline {
+    margin: 12px 0 25px;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 25px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #e04449;
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid #222222;
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* TABLET */
+@media screen and (max-width: 1000px) {
+    .nav-bar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 16px 20px;
+    }
+
+    .store-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .store-section {
+        width: 92%;
+    }
+
+    .store-intro {
+        padding-top: 50px;
+    }
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+    .nav-bar {
+        padding: 15px 4%;
+        gap: 16px;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 12px 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .order-hero {
+        min-height: 245px;
+        padding: 42px 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .store-intro {
+        padding: 48px 20px 30px;
+    }
+
+    .store-intro > p:last-child {
+        font-size: 14px;
+    }
+
+    .store-section {
+        width: 90%;
+        padding: 20px 0 30px;
+    }
+
+    .city-heading {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .city-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 17px;
+    }
+
+    .city-heading h2 {
+        font-size: 26px;
+    }
+
+    .city-heading p {
+        font-size: 12px;
+    }
+
+    .store-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .store-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .store-details {
+        padding: 20px;
+    }
+
+    .store-details h3 {
+        font-size: 22px;
+    }
+
+    .store-address {
+        font-size: 13px;
+    }
+
+    .order-bottom {
+        padding: 55px 20px;
+    }
+
+    .footer-links {
+        gap: 15px 20px;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media screen and (max-width: 350px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .store-section {
+        width: 94%;
+    }
+
+    .store-details {
+        padding: 16px;
+    }
+
+    .store-button {
+        font-size: 12px;
+    }
+}
