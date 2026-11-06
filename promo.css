@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+
+.nav-bar {
+    width: 100%;
+    padding: 20px 5%;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-right: 800px;
+    margin-top: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b72025;
+}
+
+/* PROMO SECTION */
+
+.promo-section {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.promo-icon {
+    font-size: 55px;
+    color: #b72025;
+    margin-bottom: 25px;
+}
+
+.promo-section h1 {
+    font-size: 42px;
+    color: #b72025;
+    margin-bottom: 15px;
+}
+
+.promo-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.promo-section p {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.subscribe-text {
+    margin-top: 15px;
+}
+
+.promo-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #b72025;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.promo-btn:hover {
+    background: white;
+    color: #b72025;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 25px;
+    color: #888;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .promo-section h1 {
+        font-size: 30px;
+    }
+
+    .promo-section h2 {
+        font-size: 20px;
+    }
+
+    .promo-section p {
+        font-size: 14px;
+    }
+}
